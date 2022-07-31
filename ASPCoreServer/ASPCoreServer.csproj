@@ -8,4 +8,8 @@
     <DockerfileContext>..\ConsoleClient</DockerfileContext>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ConsoleClient\MyMessager.csproj" />
+  </ItemGroup>
+
 </Project>
