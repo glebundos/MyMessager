@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleClient\MyMessager.csproj" />
+    <ProjectReference Include="..\ConsoleClient\ConsoleClient.csproj" />
   </ItemGroup>
 
 </Project>
