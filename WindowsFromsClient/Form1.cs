@@ -12,6 +12,9 @@ namespace WindowsFromsClient
 {
     public partial class Form1 : Form
     {
+        private static int MessageID;
+        private static string UserName;
+        private static MessangerClientAPI API = new();
         public Form1()
         {
             InitializeComponent();
@@ -21,5 +24,24 @@ namespace WindowsFromsClient
         {
 
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            var getMessage = new Func<Task>(async () =>
+            {
+                var msg = await API.GetMessageHTTPAsync(MessageID);
+                if (msg != null)
+                {
+                    MessageID++;
+                    Console.WriteLine(msg);
+                }
+            });
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
     }
 }

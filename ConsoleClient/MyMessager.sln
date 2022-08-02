@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleClient", "ConsoleCli
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASPCoreServer", "..\ASPCoreServer\ASPCoreServer.csproj", "{34BE1A25-8AF0-4BA8-BF3A-18F27700B285}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFromsClient", "..\WindowsFromsClient\WindowsFromsClient.csproj", "{497D6ADF-C064-4881-9A02-7FE154AAF634}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsClient", "..\WindowsFormsClient\WindowsFormsClient.csproj", "{6638D639-C4D8-4508-9EEB-3216A3863117}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{34BE1A25-8AF0-4BA8-BF3A-18F27700B285}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34BE1A25-8AF0-4BA8-BF3A-18F27700B285}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34BE1A25-8AF0-4BA8-BF3A-18F27700B285}.Release|Any CPU.Build.0 = Release|Any CPU
-		{497D6ADF-C064-4881-9A02-7FE154AAF634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{497D6ADF-C064-4881-9A02-7FE154AAF634}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{497D6ADF-C064-4881-9A02-7FE154AAF634}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{497D6ADF-C064-4881-9A02-7FE154AAF634}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6638D639-C4D8-4508-9EEB-3216A3863117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6638D639-C4D8-4508-9EEB-3216A3863117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6638D639-C4D8-4508-9EEB-3216A3863117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6638D639-C4D8-4508-9EEB-3216A3863117}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
