@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace MyMessager
 {
-    internal class MessangerClientAPI
+    public class MessangerClientAPI
     {
+        private static readonly HttpClient client = new ();
         public void TestNewtonsoftJson()
         {
             Message msg = new Message(userName: "lzy77_", messageText: "Hello!", timeStamp: DateTime.UtcNow);
@@ -45,6 +46,16 @@ namespace MyMessager
             }
         }
 
+        public async Task<Message?> GetMessageHTTPAsync(int MessageID)
+        {
+            var response = await client.GetAsync("http://localhost:5000/api/Messanger/" + MessageID.ToString());
+            if (response != null)
+            {
+                return JsonConvert.DeserializeObject<Message>(response.Content.ReadAsStringAsync().Result);
+            }
+            
+            return null;
+        }
         public bool SendMessage(Message msg)
         {
             WebRequest request = WebRequest.Create("http://localhost:5000/api/Messanger");
