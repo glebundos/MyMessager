@@ -16,5 +16,10 @@ namespace WindowsFromsClient
         {
             InitializeComponent();
         }
+
+        private void SendButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
