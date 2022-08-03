@@ -56,6 +56,7 @@ namespace MyMessager
             
             return null;
         }
+
         public bool SendMessage(Message msg)
         {
             WebRequest request = WebRequest.Create("http://localhost:5000/api/Messanger");
@@ -67,15 +68,23 @@ namespace MyMessager
             Stream stream = request.GetRequestStream();
             stream.Write(data, 0, data.Length);
             stream.Close();
-            WebResponse response = request.GetResponse();
-            string status = ((HttpWebResponse)response).StatusDescription;
-            stream = response.GetResponseStream();
-            StreamReader reader = new StreamReader(stream);
-            string responseFromServer = reader.ReadToEnd();
-            response.Close();
-            reader.Close();
-            stream.Close();
-            return (status.ToLower() == "ok");
+            WebResponse response;
+            try
+            {
+                response = request.GetResponse();
+                string status = ((HttpWebResponse)response).StatusDescription;
+                stream = response.GetResponseStream();
+                StreamReader reader = new StreamReader(stream);
+                string responseFromServer = reader.ReadToEnd();
+                response.Close();
+                reader.Close();
+                stream.Close();
+                return (status.ToLower() == "ok");
+            }
+            catch (Exception)
+            {
+                return false;   
+            }
         }
     }
 }

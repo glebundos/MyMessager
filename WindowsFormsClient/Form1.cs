@@ -13,11 +13,6 @@ namespace WindowsFormsClient
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             var getMessage = new Func<Task>(async () =>
@@ -43,6 +38,11 @@ namespace WindowsFormsClient
                 MyMessager.Message msg = new MyMessager.Message(userName: userName, messageText: message, timeStamp: DateTime.UtcNow);
                 API.SendMessage(msg);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
