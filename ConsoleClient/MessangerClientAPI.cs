@@ -48,12 +48,19 @@ namespace MyMessager
 
         public async Task<Message?> GetMessageHTTPAsync(int MessageID)
         {
-            var response = await client.GetAsync("http://localhost:5000/api/Messanger/" + MessageID.ToString());
-            if (response != null)
+            try
             {
-                return JsonConvert.DeserializeObject<Message>(response.Content.ReadAsStringAsync().Result);
+                var response = await client.GetAsync("http://localhost:5000/api/Messanger/" + MessageID.ToString());
+                if (response != null)
+                {
+                    return JsonConvert.DeserializeObject<Message>(response.Content.ReadAsStringAsync().Result);
+                }
             }
-            
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
             return null;
         }
 
